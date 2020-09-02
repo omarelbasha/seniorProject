@@ -54,7 +54,7 @@ ResultSet rs=f.query(con, sql);
 	while(rs.next()) {
 		
 		int  a=rs.getInt(1);
-		System.out.println(a);
+		
 		if(a==1) {
 			String q="select verifiyed from users where email='"+email+"'";
 			ResultSet rq=f.query(con, q);
@@ -64,6 +64,7 @@ ResultSet rs=f.query(con, sql);
 					response.sendRedirect("login.jsp");
 				}
 			}
+			
 			 session.setAttribute("em", email);
 			 if(request.getParameterValues("rember")!=null) {
 				Cookie e=new Cookie("email", email);
@@ -73,10 +74,22 @@ ResultSet rs=f.query(con, sql);
 				response.addCookie(e);
 				response.addCookie(g);
 			 }
-			
+			 String o="select role from users where email='"+email+"'";
+				ResultSet ro=f.query(con, o);
+				while(ro.next()) {
+					String role=ro.getString(1);
+					if(role.equals("admin")) {
+						response.sendRedirect("admin.jsp");
+					}
+				}
+			if(request.getAttribute("mess")!=null) {
+				request.removeAttribute("mess");
+			}
 			 response.sendRedirect("g.jsp");}
 		else {
-			response.sendRedirect("login.jsp");
+			request.setAttribute("mess", "invlaid email and password");
+			RequestDispatcher r=request.getRequestDispatcher("login.jsp");
+			r.forward(request, response);
 		}
 		
 		

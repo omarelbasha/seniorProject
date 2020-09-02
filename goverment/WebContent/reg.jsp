@@ -114,32 +114,32 @@
         <div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-				<input type="text" class="form-control" name="fname" placeholder="First Name" required="required">
+				<input type="text" class="form-control" name="fname" placeholder="First Name" id="fname" required="required">
 			</div>
         </div>
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-				<input type="text" class="form-control" name="lname" placeholder="Last Name" required="required">
+				<input type="text" class="form-control" name="lname" placeholder="Last Name" id="lname" required="required">
 			</div>
         </div>
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-phone"></i></span>
-				<input type="text" class="form-control" name="phone" placeholder="Phone Number"   required="required">
+				<input type="text" class="form-control" name="phone" placeholder="Phone Number"  id="phone"  required="required">
 			</div>
         </div>
        
         <div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
-				<input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
+				<input type="email" class="form-control" name="email" placeholder="Email Address" id="email" required="required">
 			</div>
         </div>
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-				<input type="password" class="form-control" name="password" placeholder="Password" required="required">
+				<input type="password" class="form-control" name="password" placeholder="Password" id="pass" required="required">
 			</div>
         </div>
 		<div class="form-group">
@@ -148,12 +148,12 @@
 					<i class="fa fa-lock"></i>
 					<i class="fa fa-check"></i>
 				</span>
-				<input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+				<input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" id="cpass" required="required">
 			</div>
         </div>
        
 		<div class="form-group">
-            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="sign">Sign Up</button>
         </div>
     </form>
 	<div class="text-center" style="color:black;">Already have an account? <a href="login.jsp" style="color:black;">Login here</a></div>

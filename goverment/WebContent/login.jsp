@@ -73,11 +73,11 @@ if(c!=null){
     <form action="login" method="post">
               
         <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required="required" name="email" value=<%=e!=null?e:"" %> >
-            <input type="password" class="form-control" placeholder="Password" required="required" name="password" value=<%=p!=null?p:""%>>
+            <input type="email" class="form-control" placeholder="Email" required="required" name="email" id="email" value=<%=e!=null?e:"" %> >
+            <input type="password" class="form-control" placeholder="Password" required="required" name="password" id="password" value=<%=p!=null?p:""%>>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-block" id="login">Sign in</button>
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox" name="rember" value="rember"> Remember me</label>
@@ -86,5 +86,7 @@ if(c!=null){
     </form>
     <p class="#"><a href="reg.jsp">Create an Account</a></p>
 </div>
+<%if(request.getAttribute("mess")!=null){ %>
+<p style="text-align:center;color:red"><%=request.getAttribute("mess") %></p><%} %>
 </body>
 </html>
